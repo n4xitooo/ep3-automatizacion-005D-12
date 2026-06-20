@@ -1,0 +1,19 @@
+alumno:
+  codigo: "005D-12"
+  nombre: "Ignacio Alberto Morales Waddington"
+
+cliente:
+  empresa: "AutoMotores del Sur SA"
+  hostname: "RTR-AUTOSUR"
+
+router:
+  ip: "192.168.56.101"
+  usuario: "cisco"
+  password: "cisco123!"
+  loopback_id: 10
+  loopback_ip: "10.5.12.1"
+  loopback_mask: "255.255.255.0"
+  loopback_prefix: "24"
+  descripcion_wan: "Enlace-WAN-Calama"
+  banner: "ACCESO RESTRINGIDO - AUTOSUR"
+  ntp_server: "208.67.222.222"
