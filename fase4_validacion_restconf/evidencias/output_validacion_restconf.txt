@@ -1,0 +1,22 @@
+=== VALIDACION RESTCONF ===
+Script : validacion_restconf.py
+Alumno : 005D-12 - Ignacio Alberto Morales Waddington
+Fecha  : 2026-06-20 04:12:01
+Host VM: labvm
+Router : 192.168.56.101
+===========================
+
+=== CONSULTAS RESTCONF ===
+[OK] GET hostname guardado en /home/devasc/ep3-automatizacion-005D-12/fase4_validacion_restconf/evidencias/get_hostname.json
+[OK] GET loopback guardado en /home/devasc/ep3-automatizacion-005D-12/fase4_validacion_restconf/evidencias/get_loopback.json
+[OK] GET interfaces guardado en /home/devasc/ep3-automatizacion-005D-12/fase4_validacion_restconf/evidencias/get_interfaces.json
+[OK] GET ntp guardado en /home/devasc/ep3-automatizacion-005D-12/fase4_validacion_restconf/evidencias/get_ntp.json
+
+=== CRITERIOS DE VALIDACION ===
+[OK] Hostname corporativo: encontrado 'RTR-AUTOSUR'
+[OK] IP Loopback: encontrado '10.5.12.1'
+[OK] Descripcion WAN: encontrado 'Enlace-WAN-Calama'
+[OK] Servidor NTP: encontrado '208.67.222.222'
+
+Resultado validaciones: 4/4 OK
+Resultado global: CONFORME

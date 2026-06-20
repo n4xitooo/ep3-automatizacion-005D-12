@@ -1,0 +1,14 @@
+{
+  "Cisco-IOS-XE-native:Loopback": {
+    "name": 10,
+    "description": "Loopback de gestion 005D-12",
+    "ip": {
+      "address": {
+        "primary": {
+          "address": "10.5.12.1",
+          "mask": "255.255.255.0"
+        }
+      }
+    }
+  }
+}
