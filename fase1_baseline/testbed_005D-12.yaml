@@ -1,0 +1,16 @@
+devices:
+  CSR1kv:
+    os: iosxe
+    type: router
+    credentials:
+      default:
+        username: cisco
+        password: cisco123!
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.56.101
+        port: 22
+        command: "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o KexAlgorithms=diffie-hellman-group14-sha1 cisco@192.168.56.101"
+        settings:
+          PROMPT: ".*#"
