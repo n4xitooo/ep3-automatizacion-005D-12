@@ -1,0 +1,71 @@
+---
+- name: EP3 - APROVISIONAMIENTO AUTOMATIZADO CSR1KV
+  hosts: routers
+  gather_facts: false
+
+  vars_files:
+    - ../vars/vars_005D-12.yaml
+
+  tasks:
+    - name: RESPALDAR CONFIGURACION ACTUAL DEL ROUTER
+      ios_command:
+        commands:
+          - show running-config
+      register: running_config
+
+    - name: GUARDAR RESPALDO LOCAL PREVIO AL CAMBIO
+      copy:
+        content: "{{ running_config.stdout[0] }}"
+        dest: "respaldo/backup_{{ alumno.codigo }}.cfg"
+        force: no
+      delegate_to: localhost
+
+    - name: HABILITAR NETCONF
+      ios_config:
+        lines:
+          - netconf-yang
+
+    - name: HABILITAR RESTCONF
+      ios_config:
+        lines:
+          - restconf
+
+    - name: HABILITAR SERVIDOR HTTP SEGURO PARA RESTCONF
+      ios_config:
+        lines:
+          - ip http secure-server
+          - ip http authentication local
+
+    - name: CONFIGURAR HOSTNAME CORPORATIVO
+      ios_config:
+        lines:
+          - "hostname {{ cliente.hostname }}"
+
+    - name: CONFIGURAR BANNER DE ACCESO
+      ios_banner:
+        banner: motd
+        text: "{{ router.banner }}"
+        state: present
+
+    - name: CONFIGURAR SERVIDOR NTP
+      ios_config:
+        lines:
+          - "ntp server {{ router.ntp_server }}"
+
+    - name: CONFIGURAR DESCRIPCION INTERFAZ WAN
+      ios_config:
+        parents: "interface GigabitEthernet1"
+        lines:
+          - "description {{ router.descripcion_wan }}"
+
+    - name: CREAR LOOPBACK DE GESTION
+      ios_config:
+        parents: "interface Loopback{{ router.loopback_id }}"
+        lines:
+          - "description Loopback de gestion {{ alumno.codigo }}"
+          - "ip address {{ router.loopback_ip }} {{ router.loopback_mask }}"
+
+    - name: GUARDAR CONFIGURACION FINAL
+      ios_config:
+        save_when: modified
+      changed_when: false
