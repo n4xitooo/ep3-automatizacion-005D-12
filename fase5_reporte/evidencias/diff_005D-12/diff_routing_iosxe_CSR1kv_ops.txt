@@ -1,0 +1,26 @@
+--- ../fase1_baseline/evidencias/baseline_005D-12/routing_iosxe_CSR1kv_ops.txt
++++ evidencias/snapshot_final_005D-12/routing_iosxe_CSR1kv_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      routes:
++      10.5.12.0/24: 
++       active: True
++       next_hop: 
++        outgoing_interface: 
++         Loopback10: 
++          outgoing_interface: Loopback10
++       route: 10.5.12.0/24
++       source_protocol: connected
++       source_protocol_codes: C
++      10.5.12.1/32: 
++       active: True
++       next_hop: 
++        outgoing_interface: 
++         Loopback10: 
++          outgoing_interface: Loopback10
++       route: 10.5.12.1/32
++       source_protocol: local
++       source_protocol_codes: L

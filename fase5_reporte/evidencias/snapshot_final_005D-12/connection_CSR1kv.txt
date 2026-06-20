@@ -1,0 +1,15 @@
+[2026-06-20 04:30:54,335] +++ CSR1kv logfile evidencias/snapshot_final_005D-12/connection_CSR1kv.txt +++
+[2026-06-20 04:30:54,335] +++ Unicon plugin iosxe +++
+Warning: Permanently added '192.168.56.101' (RSA) to the list of known hosts.
+
+[2026-06-20 04:30:54,384] +++ connection to spawn: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o KexAlgorithms=diffie-hellman-group14-sha1 cisco@192.168.56.101, id: 139971322065248 +++
+[2026-06-20 04:30:54,385] connection to CSR1kv
+Password: 
+
+ACCESO RESTRINGIDO - AUTOSUR
+
+
+
+RTR-AUTOSUR#
+[2026-06-20 04:30:56,398] Learned hostname(s) : ['RTR-AUTOSUR'].
+[2026-06-20 04:30:56,399] +++ initializing handle +++

@@ -1,0 +1,54 @@
+================================================================================
+CERTIFICADO DE COMPLIANCE — EP3 DRY7122
+================================================================================
+
+Fecha de emision : 2026-06-20 04:33:05
+Host VM          : labvm
+
+DATOS DEL ALUMNO
+--------------------------------------------------------------------------------
+Codigo           : 005D-12
+Nombre           : Ignacio Alberto Morales Waddington
+
+DATOS DEL CLIENTE
+--------------------------------------------------------------------------------
+Empresa cliente  : AutoMotores del Sur SA
+Router IP        : 192.168.56.101
+Hostname final   : RTR-AUTOSUR
+
+CONFIGURACION CORPORATIVA VALIDADA
+--------------------------------------------------------------------------------
+Hostname         : RTR-AUTOSUR
+Loopback gestion : 10.5.12.1 255.255.255.0
+Descripcion WAN  : Enlace-WAN-Calama
+Banner acceso    : ACCESO RESTRINGIDO - AUTOSUR
+Servidor NTP     : 208.67.222.222
+
+EVIDENCIAS GENERADAS
+--------------------------------------------------------------------------------
+Snapshot final   : /home/devasc/ep3-automatizacion-005D-12/fase5_reporte/evidencias/snapshot_final_005D-12
+Archivos snapshot: 7
+Diff baseline    : /home/devasc/ep3-automatizacion-005D-12/fase5_reporte/evidencias/diff_005D-12
+Archivos diff    : 2
+Diff consolidado : /home/devasc/ep3-automatizacion-005D-12/fase5_reporte/evidencias/diff_baseline_final.txt
+NETCONF output   : /home/devasc/ep3-automatizacion-005D-12/fase3_validacion_netconf/evidencias/output_validacion_netconf.txt
+RESTCONF output  : /home/devasc/ep3-automatizacion-005D-12/fase4_validacion_restconf/evidencias/output_validacion_restconf.txt
+
+RESULTADOS DE VALIDACION
+--------------------------------------------------------------------------------
+NETCONF          : CONFORME
+RESTCONF         : CONFORME
+SNAPSHOT FINAL   : CONFORME
+GENIE DIFF       : CONFORME
+
+RESULTADO GLOBAL DE COMPLIANCE
+--------------------------------------------------------------------------------
+COMPLIANCE       : CONFORME
+
+CONCLUSION
+--------------------------------------------------------------------------------
+El router RTR-AUTOSUR fue aprovisionado mediante Ansible y validado mediante
+NETCONF, RESTCONF y Genie Diff. Las evidencias indican que el dispositivo cumple
+con la configuracion corporativa definida para AutoMotores del Sur SA.
+
+================================================================================
