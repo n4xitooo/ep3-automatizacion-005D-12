@@ -1,0 +1,21 @@
+=== VALIDACION NETCONF ===
+Script : validacion_netconf.py
+Alumno : 005D-12 - Ignacio Alberto Morales Waddington
+Fecha  : 2026-06-20 04:07:26
+Host VM: labvm
+Router : 192.168.56.101
+==========================
+
+[OK] XML crudo guardado en: /home/devasc/ep3-automatizacion-005D-12/fase3_validacion_netconf/evidencias/rpc_reply_raw.xml
+[OK] Tamano XML: 2735 bytes
+[OK] message-id UUID valido: urn:uuid:5d71d695-7cd5-4ec2-adab-b50aada344fc
+
+=== CRITERIOS DE CONFIGURACION ===
+[OK] Hostname corporativo: esperado='RTR-AUTOSUR' obtenido='RTR-AUTOSUR'
+[OK] IP Loopback: esperado='10.5.12.1' obtenido='10.5.12.1'
+[OK] Mascara Loopback: esperado='255.255.255.0' obtenido='255.255.255.0'
+[OK] Descripcion WAN: esperado='Enlace-WAN-Calama' obtenido='Enlace-WAN-Calama'
+[OK] Servidor NTP: esperado='208.67.222.222' obtenido='208.67.222.222'
+
+Resultado validaciones: 5/5 OK
+Resultado global: CONFORME
